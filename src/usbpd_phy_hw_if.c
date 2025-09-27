@@ -221,7 +221,6 @@ void USBPDM1_AssertRd(uint8_t PortNum)
   }
 
   SET_BIT(SYSCFG->CFGR1, (Ports[PortNum].husbpd == UCPD1) ? SYSCFG_CFGR1_UCPD1_STROBE : SYSCFG_CFGR1_UCPD2_STROBE);
-  HAL_Delay(1);
 
 #ifndef _LOW_POWER
   LL_UCPD_TypeCDetectionCC2Enable(Ports[PortNum].husbpd);
