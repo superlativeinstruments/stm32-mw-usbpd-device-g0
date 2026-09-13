@@ -1638,7 +1638,7 @@ static uint32_t ManageStateEMC(uint8_t PortNum, USBPD_CAD_EVENT *pEvent, CCxPin_
         {
           _handle->cstate = USBPD_CAD_STATE_SWITCH_TO_SNK;
         }
-        _timing = 0;
+        _timing = CAD_DEFAULT_TIME;
       }
 #else
       _timing = CAD_DEFAULT_TIME;
